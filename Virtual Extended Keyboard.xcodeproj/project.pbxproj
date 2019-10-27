@@ -11,6 +11,7 @@
 		EA050CDA2199EC1F00F04DD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA050CD92199EC1F00F04DD0 /* ViewController.swift */; };
 		EA050CDC2199EC1F00F04DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA050CDB2199EC1F00F04DD0 /* Assets.xcassets */; };
 		EA050CDF2199EC1F00F04DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA050CDD2199EC1F00F04DD0 /* Main.storyboard */; };
+		EABC56422199F128001734F4 /* com.chikim.Virtual-Extended-Keyboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = EABC56412199F128001734F4 /* com.chikim.Virtual-Extended-Keyboard.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		EA050CDE2199EC1F00F04DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA050CE02199EC1F00F04DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA050CE12199EC1F00F04DD0 /* Virtual_Extended_Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Virtual_Extended_Keyboard.entitlements; sourceTree = "<group>"; };
+		EABC56402199F078001734F4 /* Virtual Extended Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Virtual Extended Keyboard.entitlements"; sourceTree = "<group>"; };
+		EABC56412199F128001734F4 /* com.chikim.Virtual-Extended-Keyboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.chikim.Virtual-Extended-Keyboard.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 		EA050CCB2199EC1F00F04DD0 = {
 			isa = PBXGroup;
 			children = (
+				EABC56412199F128001734F4 /* com.chikim.Virtual-Extended-Keyboard.plist */,
 				EA050CD62199EC1F00F04DD0 /* Virtual Extended Keyboard */,
 				EA050CD52199EC1F00F04DD0 /* Products */,
 			);
@@ -53,6 +57,7 @@
 		EA050CD62199EC1F00F04DD0 /* Virtual Extended Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				EABC56402199F078001734F4 /* Virtual Extended Keyboard.entitlements */,
 				EA050CD72199EC1F00F04DD0 /* AppDelegate.swift */,
 				EA050CD92199EC1F00F04DD0 /* ViewController.swift */,
 				EA050CDB2199EC1F00F04DD0 /* Assets.xcassets */,
@@ -95,6 +100,14 @@
 				TargetAttributes = {
 					EA050CD32199EC1F00F04DD0 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -122,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA050CDC2199EC1F00F04DD0 /* Assets.xcassets in Resources */,
+				EABC56422199F128001734F4 /* com.chikim.Virtual-Extended-Keyboard.plist in Resources */,
 				EA050CDF2199EC1F00F04DD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,15 +285,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Virtual Extended Keyboard/Virtual_Extended_Keyboard.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9N598S2535;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Virtual Extended Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chikim.Virtual-Extended-Keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -290,15 +305,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Virtual Extended Keyboard/Virtual_Extended_Keyboard.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9N598S2535;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Virtual Extended Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chikim.Virtual-Extended-Keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
