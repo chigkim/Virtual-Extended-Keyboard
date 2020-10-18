@@ -12,7 +12,6 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-	
 	func checkAccess(ask:Bool) -> Bool {
 		let prompt = kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString
 		let options = [prompt: ask]
@@ -88,5 +87,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	
-}
 
+
+}
